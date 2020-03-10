@@ -11,7 +11,7 @@ import java.util.*;
  * @author isaac.grau
  */
 public class Line extends Observable{
- 
+
     static final int SEC_BACKSPACE = 127;
     static final int ESCAPE_SEC = 2999; //a partir de 2999 hem definit les escape secuences
     static final int SEC_HOME = 3000;
@@ -22,7 +22,7 @@ public class Line extends Observable{
     static final int SEC_DELETE = 3005;
     static final int CHARACTER = 3006;
     static final int FINAL = 3007;
-    
+
     ArrayList<Integer> lineBuffer;
     Boolean insert;
     int cursor, length;
@@ -34,7 +34,6 @@ public class Line extends Observable{
         return insert;
     }
     public char getLastChar(){
-        
         return this.lastChar;
     }
     public Line(){
@@ -42,9 +41,9 @@ public class Line extends Observable{
         this.lineBuffer = new ArrayList<>();
         this.cursor = 0;
         this.length = 0;
-        
+
     }
-   
+
     public String toString(){
         String str = "";
         int i = 0;
@@ -63,7 +62,7 @@ public class Line extends Observable{
         //System.out.print(ANSI_INSERT);
         this.setChanged();
     }
-    
+
     public void addCaracter(int a){
         if(this.insert){
             if(this.cursor < this.lineBuffer.size()){
@@ -78,7 +77,7 @@ public class Line extends Observable{
                 for(i=this.length; i>this.cursor; i--){
                     this.lineBuffer.add(i,this.lineBuffer.get(i-1));
                     this.lineBuffer.remove(i-1);
-                }    
+                }
             }
             this.lineBuffer.add(this.cursor, a);
         }
@@ -97,8 +96,13 @@ public class Line extends Observable{
         this.cursor = this.lineBuffer.size();
         this.setChanged();
     }
-    
+
     public void Delete(){
+      if(this.cursor = this.lineBuffer.size()){
+        this.lineBuffer.remove(this.cursor);
+        this.length --;
+      }
+      this.setChanged();
     }
 
     public void Backspace(){
@@ -111,12 +115,22 @@ public class Line extends Observable{
     }
 
     public void Right(){
-    
+      if(this.cursor < this.lineBUffer.size()){
+        this.cursor ++;
+      }
+      this.setChanged();
     }
 
     public void Left(){
-    }   
+      if(this.cursor > 0){
+        this.cursor --;
+      }
+      this.setCanged();
+    }
+
     public void enter(){
+      this.setChanged();
+      t
     }
 
 }

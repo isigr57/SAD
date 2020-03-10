@@ -11,7 +11,7 @@ import java.io.*;
 import java.util.*;
 /**
  *
- * @author isaac.grau
+ * @author isaac.grau laura.macia
  */
 public class EditableBufferedReader extends BufferedReader{
     Line linia;

@@ -8,7 +8,7 @@ import java.io.*;
 
 /**
  *
- * @author isaac.grau
+ * @author isaac.grau laura.macia
  */
 public class TestReadLine {
     public static void main(String[] args) {

@@ -10,7 +10,7 @@ import java.util.*;
  *
  * @author isaac.grau laura.macia
  */
-public class Line extends Observable{
+public class Line{
 
     static final int SEC_BACKSPACE = 127;
     static final int ESCAPE_SEC = 2999; //a partir de 2999 hem definit les escape secuences
@@ -25,7 +25,6 @@ public class Line extends Observable{
 
     ArrayList<Integer> lineBuffer;
     Boolean insert;
-    int cursor, length;
     char lastChar;
     public int getPos(){
         return this.cursor;
@@ -130,7 +129,6 @@ public class Line extends Observable{
 
     public void enter(){
       this.setChanged();
-      t
     }
 
 }

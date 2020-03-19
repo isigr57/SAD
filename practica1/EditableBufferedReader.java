@@ -26,7 +26,7 @@ public class EditableBufferedReader extends BufferedReader{
         static final int INSERT = 50;
         static final int DELETE = 51;
         static final int CORCHETE = 91;
-        static final int TRONCHO = 126; //simbol ~
+        static final int TILDE = 126; //simbol ~
         static final int INTERROGANT = 63;
         static final int ENTER = 13;
 

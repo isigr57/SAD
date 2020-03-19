@@ -1,6 +1,9 @@
 import java.io.*;
 import java.util.*;
-
+/**
+ *
+ * @author isaac.grau laura.macia
+ */
 public class EditableBufferedReader extends BufferedReader { // CONTROLLER
 
     private Line line;
@@ -10,9 +13,9 @@ public class EditableBufferedReader extends BufferedReader { // CONTROLLER
         super(in);
         this.line = new Line(); // Model
         this.console = new Console(); // View
-        this.line.addObserver(this.console);  
+        this.line.addObserver(this.console);
     }
-    
+
     // Metodes
     // setRaw: passa la consola de mode cooked a mode raw.
     public void setRaw() {
@@ -125,7 +128,7 @@ public class EditableBufferedReader extends BufferedReader { // CONTROLLER
                 break;
             default:
                 if (line.getMode()) { // Distinct mode insert
-                    line.insertChar((char) llegit);      
+                    line.insertChar((char) llegit);
                 } else {
                     line.replaceChar((char) llegit);
                 }

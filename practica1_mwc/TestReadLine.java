@@ -1,5 +1,8 @@
 import java.io.*;
-
+/**
+ *
+ * @author isaac.grau laura.macia
+ */
 class TestReadLine {
 
   public static final String GREEN_BACKGROUND = "\033[42m";

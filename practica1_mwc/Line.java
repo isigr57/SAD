@@ -1,6 +1,9 @@
 import java.util.Observable;
 public class Line extends Observable {    // MODEL
-
+  /**
+   *
+   * @author isaac.grau laura.macia
+   */
     private int posCursor;
     private StringBuilder line;
     private Boolean modeInsert;

@@ -1,4 +1,7 @@
-
+/**
+ *
+ * @author isaac.grau laura.macia
+ */
 //ANSI escape sequences used on Console to print
 interface ANSI {
 

@@ -1,3 +1,7 @@
+/**
+ *
+ * @author isaac.grau laura.macia
+ */
 interface Dictionary {
 
     // Codificacions per a les sequencies d'escape en sistema MACOS trobades

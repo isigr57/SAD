@@ -1,6 +1,6 @@
 <h1>ISAAC GRAU, LAURA MACIÀ<h1>
 
-- 3/3/2020
+<p>- 3/3/2020
 EditableBufferedReader en pricipi creien que acabat amb conbinacions de teclas i parsing fet
 Line faltan acabar alguns metodes i el patro mvc esta mig implementat
 
@@ -21,3 +21,4 @@ perque creiem que es mes optima tal i com està ara.
 (LES SEQUENCIES D?ESCAPE ESTAN PROGRAMADES AMB MACOS I AVEGADES FALLEN AMB WINDOWS)
 
 --------------DONEM PER FINALITZADA LA PRACTICA 1 (POSSIBLES MILLORES)----------------
+</p>

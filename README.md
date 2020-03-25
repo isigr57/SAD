@@ -21,3 +21,6 @@ perque creiem que es mes optima tal i com està ara.
 (LES SEQUENCIES D?ESCAPE ESTAN PROGRAMADES AMB MACOS I AVEGADES FALLEN AMB WINDOWS)
 
 --------------DONEM PER FINALITZADA LA PRACTICA 1 (POSSIBLES MILLORES)----------------
+
+-25/03/2020
+Comencem practica 2 funciona pero te fallos a la recepcio de misatges per part del client.

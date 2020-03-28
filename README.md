@@ -2,9 +2,8 @@
 
 - 3/3/2020
 EditableBufferedReader en pricipi creien que acabat amb conbinacions de teclas i parsing fet
-Line faltan acabar alguns metodes i el patro mvc esta mig implementat
-
-Seguent sessió acabarem Line i implementarem console
+Line faltan acabar alguns metodes i el patro mvc esta mig implementat. Seguent sessió acabarem
+Line i implementarem console
 
 - 6/3/2020
 Resolts tots els problemes i github integrat correctament a atom.io
@@ -22,5 +21,5 @@ perque creiem que es mes optima tal i com està ara.
 
 --------------DONEM PER FINALITZADA LA PRACTICA 1 (POSSIBLES MILLORES)----------------
 
--25/03/2020
+- 25/03/2020
 Comencem practica 2 funciona pero te fallos a la recepcio de misatges per part del client.

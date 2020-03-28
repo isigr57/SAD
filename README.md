@@ -22,4 +22,7 @@ perque creiem que es mes optima tal i com està ara.
 --------------DONEM PER FINALITZADA LA PRACTICA 1 (POSSIBLES MILLORES)----------------
 
 - 25/03/2020
-Comencem practica 2 funciona pero te fallos a la recepcio de misatges per part del client.
+Comencem practica 2 funciona pero te errors a la recepcio de misatges per part del client.
+
+- 28/03/2020
+Hem arreclat els errors a la recepció de misatges per part del client. Ara el xat funciona correctament.

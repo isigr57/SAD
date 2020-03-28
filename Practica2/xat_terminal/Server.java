@@ -5,11 +5,19 @@ import java.util.concurrent.Executors;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Server {
+
+    public static final String RESET = "\u001B[0m";
+    public static final String RED = "\u001B[31m";
+    public static final String PURPLE = "\u001B[35m";
+    public static final String GREEN_BACKGROUND = "\u001B[42m";
+    public static final String CYAN_BACKGROUND = "\u001B[46m";
+
     private static final int PORT=4444;
     public static ConcurrentHashMap<String, Handler> clients = new ConcurrentHashMap<String, Handler>();
     public static void main(String[] args) throws Exception {
@@ -21,12 +29,11 @@ public class Server {
             }
         }
     }
-    
+
     public static class Handler implements Runnable {
         private String name;
         private final MySocket socket;
-        final int time = 50;
-        private String lastMsg; 
+        private String lastMsg = "";
         public BufferedReader in = null;
         public PrintWriter out = null;
         public Handler(MySocket sc){
@@ -35,9 +42,9 @@ public class Server {
             this.out = new PrintWriter(socket.MyGetOutputStream(), true);
         }
         @Override
-        public void run(){  
+        public void run(){
             try (this.socket) {
-                while(true){                  
+                while(true){
                     this.out.print("Enter username: \n");
                     this.out.flush();
                     try{
@@ -46,19 +53,19 @@ public class Server {
                         System.out.println(e);
                     }
                     if(!clients.containsKey(this.name)){
-                        clients.put(this.name, this);
                         Server.clients.values().stream().map((ms) -> {
-                            ms.out.print("-> "+this.name+" has joined the chat\n");
+                            ms.out.print(CYAN_BACKGROUND + "-> " +RESET+this.name+" has joined the chat\n" );
                             return ms;
                         }).forEachOrdered((ms) -> {
                             ms.out.flush();
-                        });                     
-                        System.out.println("NEW USER: "+this.name);
+                        });
+                        System.out.println("NEW USER: "+this.name );
+                        clients.put(this.name, this);
                         break;
                     }else{
-                        this.out.println("NAME ALREADY TAKEN\n");
+                        this.out.println(RED + "NAME ALREADY TAKEN\n" + RESET);
                         this.out.flush();
-                    }                
+                    }
                 }
                 while(true){
                     try {
@@ -68,27 +75,31 @@ public class Server {
                             if(this.lastMsg.equals("logout") || this.lastMsg.equals("Logout")){
                                 clients.remove(this.name);
                                 Server.clients.values().stream().map((ms) -> {
-                                    ms.out.print("-> "+this.name+" has left the chat\n");
+                                    ms.out.print(GREEN_BACKGROUND+ "-> "+RESET+this.name+" has left the chat\n" );
                                     return ms;
                                 }).forEachOrdered((ms) -> {
                                     ms.out.flush();
                                 });
                                 break;
                             }
-                            
+
                         }
-                    } catch (IOException e) {                        
+                    } catch (IOException e) {
                         System.out.println(e);
                     }
-                    if(!"{{reseted}}".equals(this.lastMsg)){
+
+                    if(!"".equals(this.lastMsg)){
                         Server.clients.values().stream().map((ms) -> {
-                            ms.out.print("-> "+this.name+": "+this.lastMsg+"\n");
-                            return ms;
+                            if(!ms.name.equals(this.name)) {
+                                ms.out.print("-> "+this.name+": "+this.lastMsg+"\n");
+                            }
+                             return ms;
+
                         }).forEachOrdered((ms) -> {
                             ms.out.flush();
                         });
                     }
-                    this.lastMsg = "{{reseted}}";
+                    this.lastMsg = "";
                 }
             }
             try {

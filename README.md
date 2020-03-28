@@ -5,7 +5,7 @@ EditableBufferedReader en pricipi creien que acabat amb conbinacions de teclas i
 Line faltan acabar alguns metodes i el patro mvc esta mig implementat. Seguent sessió acabarem
 Line i implementarem console
 
-- 6/3/2020
+- 6/3/2020n
 Resolts tots els problemes i github integrat correctament a atom.io
 
 

@@ -7,11 +7,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Client {
-    public static final int SERVER_PORT = 4444;
-    public static final String SERVER_HOST = "localhost";
     public static String name="initial", lastLine = "initial";
     public static void main(String[] args) throws IOException{
-        MySocket sc = new MySocket(args[0] ,Integer.parseInt(args[1])));
+        MySocket sc = new MySocket(args[0],Integer.parseInt(args[1]));
         Scanner teclat = new Scanner(System.in);
         PrintWriter out = new PrintWriter(sc.MyGetOutputStream(), true);
         BufferedReader in = new BufferedReader(new InputStreamReader(sc.MyGetInputStream()));
@@ -34,6 +32,7 @@ public class Client {
                             name = lastLine;
                         }
                         System.out.println(msg);
+                      }
                 } catch (IOException ex) {
                     Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
                 }

@@ -1,7 +1,3 @@
-package xat;
-
-   
-
 import java.io.*;
 import java.net.*;
 import java.util.logging.Level;
@@ -11,10 +7,10 @@ public class MyServerSocket extends ServerSocket {
     ServerSocket ss;
     MySocket sc;
     public MyServerSocket(int port) throws IOException{
-       
+
         this.ss = new ServerSocket(port);
     }
-    
+
     @Override
     public MySocket accept(){
         try {
@@ -32,7 +28,5 @@ public class MyServerSocket extends ServerSocket {
         } catch (IOException ex) {
             Logger.getLogger(MyServerSocket.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }   
+    }
 }
-
-

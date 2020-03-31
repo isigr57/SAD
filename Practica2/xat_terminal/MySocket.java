@@ -1,5 +1,3 @@
-package xat;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -51,9 +49,9 @@ public class MySocket extends Socket{
        }
    }
 }
-   
-   
-           
+
+
+
    /*public Scanner inStream(){
        try {
            return new Scanner(sc.getInputStream());
@@ -72,4 +70,3 @@ public class MySocket extends Socket{
    }
 }
 */
-  

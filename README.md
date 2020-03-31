@@ -26,3 +26,6 @@ Comencem practica 2 funciona pero te errors a la recepcio de misatges per part d
 
 - 28/03/2020
 Hem arreclat els errors a la recepció de misatges per part del client. Ara el xat funciona correctament.
+
+- 31/03/2020
+Acabada la primera part de la practica arreclats tots els error i millorada l'estetica.

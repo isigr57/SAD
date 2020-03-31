@@ -1,5 +1,3 @@
-package xat;
-
 import java.io.PrintWriter;
 import java.util.concurrent.Executors;
 import java.io.BufferedReader;
@@ -17,13 +15,11 @@ public class Server {
     public static final String PURPLE = "\u001B[35m";
     public static final String GREEN_BACKGROUND = "\u001B[42m";
     public static final String CYAN_BACKGROUND = "\u001B[46m";
-
-    private static final int PORT=4444;
     public static ConcurrentHashMap<String, Handler> clients = new ConcurrentHashMap<String, Handler>();
     public static void main(String[] args) throws Exception {
         System.out.println("The server is running...");
         var pool = Executors.newFixedThreadPool(500);
-        try (MyServerSocket listener = new MyServerSocket(PORT)) {
+        try (MyServerSocket listener = new MyServerSocket(Integer.parseInt(args[0]))) {
             while (true) {
                 pool.execute(new Handler(listener.accept()));
             }

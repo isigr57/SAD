@@ -16,46 +16,46 @@
 	<div class="teclas">
 		<div class="funcionstrigo" id="panel_ft">
 			<div>
-		        <button id="ft1">sin</button>
-		        <button id="ft2">cos</button>
-		        <button id="ft3">tan</button>
+		        <button id="ft1" value="sin" onclick="write_res('ft1')">sin</button>
+		        <button id="ft2" value="cos" onclick="write_res('ft2')">cos</button>
+		        <button id="ft3" value="tan" onclick="write_res('ft3')">tan</button>
 	    	</div>
 			<div>
-		        <button id="ft4">asin</button>
-		        <button id="ft5">acos</button>
-		        <button id="ft6">atan</button>
+		        <button id="ft4" value="asin" onclick="write_res('ft4')">asin</button>
+		        <button id="ft5" value="acos" onclick="write_res('ft5')">acos</button>
+		        <button id="ft6" value="atan" onclick="write_res('ft6')">atan</button>
 		    </div>
 		    <div>
-		        <button id="ft7">sinh</button>
-		        <button id="ft8">cosh</button>
-		        <button id="ft9">tanh</button>
+		        <button id="ft7" value="sinh" onclick="write_res('ft7')">sinh</button>
+		        <button id="ft8" value="cosh" onclick="write_res('ft8')">cosh</button>
+		        <button id="ft9" value="tanh" onclick="write_res('ft9')">tanh</button>
 		    </div>
 				<div>
-		        <button id="ft10">asinh</button>
-		        <button id="ft11">acosh</button>
-		        <button id="ft12">atanh</button>
+		        <button id="ft10" value="asinh" onclick="write_res('ft10')">asinh</button>
+		        <button id="ft11" value="acosh" onclick="write_res('ft11')">acosh</button>
+		        <button id="ft12" value="atanh" onclick="write_res('ft12')">atanh</button>
 		    </div>
 		</div>
 		<div class="funcionsavansades" id="panel_fa">
 			<div>
-		        <button id="fa1">(</button>
-		        <button id="fa2">)</button>
-		        <button id="fa3">%</button>
+		        <button id="fa1"  value="(" onclick="write_res('fa1')">(</button>
+		        <button id="fa2"  value=")" onclick="write_res('fa2')">)</button>
+		        <button id="fa3"  value="Mod" onclick="write_res('fa3')">%</button>
 	    	</div>
 			<div>
-		        <button id="fa4">^</button>
-		        <button id="fa5">√</button>
-		        <button id="fa6">ln</button>
+		        <button id="fa4"  value="^" onclick="write_res('fa4')">^</button>
+		        <button id="fa5" value="root" onclick="write_res('fa5')">√</button>
+		        <button id="fa6" value="ln" onclick="write_res('fa6')">ln</button>
 		    </div>
 		    <div>
-		        <button id="fa7">lg10</button>
-		        <button id="fa8">π</button>
-		        <button id="fa9">e</button>
+		        <button id="fa7" value="log10" onclick="write_res('fa7')">lg10</button>
+		        <button id="fa8" value="pi" onclick="write_res('fa8')">π</button>
+		        <button id="fa9" value="e" onclick="write_res('fa9')">e</button>
 		    </div>
 				<div>
-		        <button id="fa10">P</button>
-		        <button id="fa11">C</button>
-		        <button id="fa12">!</button>
+		        <button id="fa10" value="P" onclick="write_res('fa10')">P</button>
+		        <button id="fa11" value="C" onclick="write_res('fa11')">C</button>
+		        <button id="fa12" value="!" onclick="write_res('fa12')">!</button>
 		    </div>
 		</div>
 		<div class="numeros">
@@ -65,29 +65,30 @@
 						<button id="dl">Del</button>
 			</div>
 			<div>
-		        <button id="n1">1</button>
-		        <button id="n2">2</button>
-		        <button id="n3">3</button>
-	    	</div>
-			<div>
-		        <button id="n4">4</button>
-		        <button id="n5">5</button>
-		        <button id="n6">6</button>
-		    </div>
-		    <div>
-		        <button id="n7">7</button>
-		        <button id="n8">8</button>
-		        <button id="n9">9</button>
-		    </div>
-		    <div>
-		        <button id="n0">0</button>
-		    </div>
-	    </div>
-		<div class="op">
-		    <button id="s">+</button>
-		    <button id="r">-</button>
-		    <button id="d" value="/">÷</button>
-		    <button id="m" value="*">x</button>
+				<button id="n1" value="1" onclick="write_res('n1')">1</button>
+				<button id="n2" value="2" onclick="write_res('n2')">2</button>
+				<button id="n3" value="3" onclick="write_res('n3')">3</button>
+		</div>
+	<div>
+				<button id="n4" value="4" onclick="write_res('n4')">4</button>
+				<button id="n5" value="5" onclick="write_res('n5')">5</button>
+				<button id="n6" value="6" onclick="write_res('n6')">6</button>
+		</div>
+		<div>
+				<button id="n7" value="7" onclick="write_res('n7')">7</button>
+				<button id="n8" value="8" onclick="write_res('n8')">8</button>
+				<button id="n9" value="9" onclick="write_res('n9')">9</button>
+		</div>
+		<div>
+				<button id="n0" value="0" onclick="write_res('n0')">0</button>
+		</div>
+	</div>
+<div class="op">
+		<button id="s" value="+" onclick="write_res('s')">+</button>
+		<button id="r" value="-" onclick="write_res('r')">-</button>
+		<button id="d" value="/" onclick="write_res('d')">÷</button>
+		<button id="m" value="*" onclick="write_res('m')">x</button>
+		<button id="punt" value="." onclick="write_res('punt')">.</button>
 	    </div>
 	</div>
 	<div class="sr">
@@ -105,6 +106,9 @@
 <script src="js/math.js"></script>
 <script src="js/math-expression-evaluator.js"></script>
 <script src="js/funcions.js"></script>
-<h6>2020-2021 Universitat Politècnica de Catalunya®</h6>
+<footer>
+<br><br>
+<h6>2020-2021 Universitat Politècnica de Catalunya®</h6><br
+</footer>
 </body>
 </html>

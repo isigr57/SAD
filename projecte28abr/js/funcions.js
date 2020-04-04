@@ -16,6 +16,8 @@ document.getElementById("sr").addEventListener("click",showResult);
 document.getElementById("cl").addEventListener("click",clear);
 document.getElementById("ans").addEventListener("click", res_anterior);
 document.getElementById("dl").addEventListener("click", delete_last);
+document.getElementById("fa").addEventListener("click", funcions_avansades);
+document.getElementById("ft").addEventListener("click", funcions_trigo);
 
 function n1() {
 	let actual = document.getElementById('resultado').innerHTML;
@@ -110,4 +112,22 @@ function res_anterior(){
 function delete_last(){
 	let res=document.getElementById('resultado').innerHTML;
 	document.getElementById('resultado').innerHTML=res.replace(/(\s+)?.$/, '');
+}
+function funcions_avansades(){
+	var checkBox = document.getElementById("fa");
+	var fa = document.getElementById("panel_fa");
+	if (checkBox.checked == true){
+    fa.style.display = "inline";
+  } else {
+    fa.style.display = "none";
+  }
+}
+function funcions_trigo(){
+	var checkBox = document.getElementById("ft");
+	var fa = document.getElementById("panel_ft");
+	if (checkBox.checked == true){
+		fa.style.display = "inline";
+	} else {
+		fa.style.display = "none";
+	}
 }

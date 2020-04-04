@@ -8,13 +8,35 @@
 <body>
 <br>
 <h1>Calculadora SAD 2020 | Isaac Grau | Laura Macià</h1>
-<h3>Creada amb HTML, CSS, JAVASCRIPT implementant <b>MATH.JS<b></h3>
+<h3>Creada amb HTML, CSS, JAVASCRIPT implementant <b>MATH.JS</b></h3>
 <div class="calculadora">
 	<div class="pantalla">
 		<div id="resultado" prevalue="" value="" contentEditable=true data-text="Introdueix operació"></div>
 	</div>
 	<div class="teclas">
-		<div class="funcionsavansades">
+		<div class="funcionstrigo" id="panel_ft">
+			<div>
+		        <button id="ft1">sin</button>
+		        <button id="ft2">cos</button>
+		        <button id="ft3">tan</button>
+	    	</div>
+			<div>
+		        <button id="ft4">asin</button>
+		        <button id="ft5">acos</button>
+		        <button id="ft6">atan</button>
+		    </div>
+		    <div>
+		        <button id="ft7">sinh</button>
+		        <button id="ft8">cosh</button>
+		        <button id="ft9">tanh</button>
+		    </div>
+				<div>
+		        <button id="ft10">asinh</button>
+		        <button id="ft11">acosh</button>
+		        <button id="ft12">atanh</button>
+		    </div>
+		</div>
+		<div class="funcionsavansades" id="panel_fa">
 			<div>
 		        <button id="fa1">(</button>
 		        <button id="fa2">)</button>
@@ -65,12 +87,20 @@
 		    <button id="s">+</button>
 		    <button id="r">-</button>
 		    <button id="d" value="/">÷</button>
-		    <button id="m" value="tan">x</button>
+		    <button id="m" value="*">x</button>
 	    </div>
 	</div>
 	<div class="sr">
 		<button id="sr">=</button>
 	</div>
+</div>
+<br><br>
+<div class="opcions">
+	<h3><u>Opcions Avançades</u></h3><br>
+	<input type="checkbox" id="fa" name="funcionssav">
+	<label for="fa"> Funcions Avançades</label><br><br>
+	<input type="checkbox" id="ft" name="funcionstrig">
+	<label for="ft"> Funcions Trigonomètriques</label><br>
 </div>
 <script src="js/math.js"></script>
 <script src="js/math-expression-evaluator.js"></script>

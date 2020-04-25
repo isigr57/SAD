@@ -55,7 +55,8 @@ function delete_last(){
 	else if(vist.substring(vist.length-4,vist.length)=="lg10"){
 					deletec = 5;
 					deletec2=4;
-	}else{
+	}
+	else{
 			deletec = 1;
 	}
 	document.getElementById('resultado').innerHTML = vist.substring(0,vist.length-deletec2);

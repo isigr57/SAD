@@ -29,3 +29,8 @@ Hem arreclat els errors a la recepció de misatges per part del client. Ara el x
 
 - 31/03/2020
 Acabada la primera part de la practica arreclats tots els error i millorada l'estetica.
+
+--------------DONEM PER FINALITZADA LA PRACTICA 2 i 3 ----------------
+
+- 17/06/2020
+Feta revisió de totes les practiques.
